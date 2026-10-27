@@ -13,6 +13,14 @@ Not every customer is worth the same marketing effort. This project segments cus
 3. **Act:** each segment carries a description and a recommended marketing action.
 4. **Track:** actual revenue is compared against the monthly revenue plan.
 
+## Report pages
+1. **Sales analysis:** KPI cards (sales, products, orders, customers); sales by district, product, and store; sales trend by day, month, quarter, or year; sales performance by manager or product
+2. **Customer analysis:** average recency, frequency, and monetary scores; customers by RFM group; customers by segment and by loyalty group; customers and RFM score by age group; a customer table with each customer's RFM code and segment
+
+![Sales analysis page](assets/powerbi-page-1-sales-analysis.png)
+
+![Customer analysis page](assets/powerbi-page-2-customer-analysis.png)
+
 ## Files
 | File | Description |
 |---|---|
@@ -43,5 +51,3 @@ _Diagrams are editable in draw.io: [`docs/diagrams/`](docs/diagrams)._
 **Segment playbook: who to target and how**
 
 ![Segment playbook: who to target and how](assets/insight-segment-playbook.png)
-
-<!-- Power BI page screenshots: add as assets/powerbi-page-1-<name>.png, etc. -->
