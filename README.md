@@ -8,8 +8,8 @@ Not every customer is worth the same marketing effort. This project segments cus
 ![Power Query](https://img.shields.io/badge/Power%20Query-217346?style=flat)
 
 ## How it works
-1. **Score:** each customer gets a 1–4 score on Recency, Frequency, and Monetary value. The score thresholds live in a configuration table (`RFM Config`, by year), so they can be tuned without rewriting DAX.
-2. **Segment:** the R-F-M combination (for example, 4-4-4) maps to a named segment such as *Most valuable*, *Valuable*, or *VIP*.
+1. **Score:** DAX calculated columns on `dim_customer` compute each customer's recency, frequency, and monetary value and turn each into a 1–4 score.
+2. **Segment:** the R-F-M code (for example, 4-4-4) links to the `segment` table, which names the segment, such as *VIP* or *Loyal*.
 3. **Act:** each segment carries a description and a recommended marketing action.
 4. **Track:** actual revenue is compared against the monthly revenue plan.
 
@@ -17,12 +17,12 @@ Not every customer is worth the same marketing effort. This project segments cus
 | File | Description |
 |---|---|
 | `Capstone Project.pbix` | Power BI report |
-| `RFM Segments.xlsx` | R-F-M score → segment, description, and action, plus the threshold configuration |
+| `RFM Segments.xlsx` | R-F-M code → segment, description, and recommended action (the `segment` table in the model) |
 | `Segment.xlsx` / `Segment.csv` | Segment labels and display order |
 | `PowerBiCoBan_..._Kế hoạch doanh thu.xlsx` | Monthly revenue plan |
 
 ## Skills demonstrated
-Customer analytics · config-driven DAX scoring · Power Query · turning analysis into business actions
+Customer analytics · RFM scoring with DAX calculated columns · data modeling · Power Query · turning analysis into business actions
 
 ## Gallery
 
@@ -32,9 +32,13 @@ _Diagrams are editable in draw.io: [`docs/diagrams/`](docs/diagrams)._
 
 ![How the RFM scoring works](assets/dataflow.png)
 
-**Data model: config tables drive the scoring**
+**Data model: DAX-scored customers mapped to the segment table**
 
-![Data model: config tables drive the scoring](assets/data-model.png)
+![Data model: DAX-scored customers mapped to the segment table](assets/data-model.png)
+
+**Power BI Model view (from Power BI Desktop)**
+
+![Power BI Model view](assets/powerbi-data-model.png)
 
 **Segment playbook: who to target and how**
 
