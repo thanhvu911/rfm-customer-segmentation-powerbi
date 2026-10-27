@@ -26,16 +26,18 @@ Customer analytics · config-driven DAX scoring · Power Query · turning analys
 
 ## Gallery
 
-**Data flow**
+_Diagrams are editable in draw.io: [`docs/diagrams/`](docs/diagrams)._
 
-![Data flow](assets/dataflow.png)
+**How the RFM scoring works**
 
-**Data model**
+![How the RFM scoring works](assets/dataflow.png)
 
-![Data model](assets/data-model.png)
+**Data model: config tables drive the scoring**
 
-**Insight: segment playbook**
+![Data model: config tables drive the scoring](assets/data-model.png)
 
-![Insight: segment playbook](assets/insight-segment-playbook.png)
+**Segment playbook: who to target and how**
+
+![Segment playbook: who to target and how](assets/insight-segment-playbook.png)
 
 <!-- Power BI page screenshots: add as assets/powerbi-page-1-<name>.png, etc. -->
